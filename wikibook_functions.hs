@@ -30,3 +30,12 @@ boxvolume l w h = l * w * h
 
 -- Write a function to calculate the volume of a cylinder.
 cylindervolume r h = pi * r ^ 2 * h
+
+-- Write a function cons8 that takes a list as an argument and conses 8 (at the beginning) on to it.
+cons8 l = 8:l
+
+-- Adapt the above function in a way that 8 is at the end of the list.
+cons8end l = l ++ [8]
+
+-- Write a function that takes two arguments, a list and a thing, and conses the thing onto the list.
+consToList l i = i:l
