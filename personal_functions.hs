@@ -23,6 +23,6 @@
  -}
 
 -- Returns the factorial of the given Integer
-factorial :: Int -> Int
+factorial :: Integer -> Integer
 factorial 0 = 1
 factorial x = x * factorial (x - 1)
