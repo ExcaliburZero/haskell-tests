@@ -26,3 +26,9 @@
 factorial :: Integer -> Integer
 factorial 0 = 1
 factorial x = x * factorial (x - 1)
+
+-- Gets the item in the list of Integers at the specified index
+getIntegerAt :: Integer -> [Integer] -> Integer
+getIntegerAt i (x:xs)
+    | i == 0 = x
+    | otherwise = getIntegerAt (i - 1) xs
