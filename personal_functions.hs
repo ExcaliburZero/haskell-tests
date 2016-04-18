@@ -34,7 +34,7 @@ getIntegerAt i (x:xs)
     | otherwise = getIntegerAt (i - 1) xs
 
 -- Checks if two Strings are equal
-areStringsEqual :: [Char] -> [Char] -> Bool
+areStringsEqual :: String -> String -> Bool
 areStringsEqual x y
-   | ((length x) == 0) || ((length y) == 0) = (length x) == (length y)
-   | otherwise = ((head x) == (head y)) && (areStringsEqual (tail x) (tail y))
+   | null x || null y = length x == length y
+   | otherwise = head x == head y && areStringsEqual (tail x) (tail y)
