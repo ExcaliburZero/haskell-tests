@@ -38,3 +38,7 @@ areStringsEqual :: String -> String -> Bool
 areStringsEqual x y
    | null x || null y = length x == length y
    | otherwise = head x == head y && areStringsEqual (tail x) (tail y)
+
+-- Returns whether or not the given number is prime
+isPrime :: Integer -> Bool
+isPrime x = length (filter (\ y -> x `mod` y == 0) [1..x]) == 2
